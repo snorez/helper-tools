@@ -9,19 +9,19 @@ vpath %.c ./
 vpath %.h ./
 
 CC = gcc -Wall -std=gnu11 -m$(ARCH) -D_FILE_OFFSET_BITS=64 -g
-objs = get_elf_syms.o \
+objs = get-elf-syms.o \
        randstr.o \
-       cp_file.o \
-       to_opcode.o \
-       search_op.o
-elfs = get_elf_syms \
+       cp-file.o \
+       to-opcode.o \
+       search-op.o
+elfs = get-elf-syms \
        randstr \
-       cp_file \
-       to_opcode \
-       search_op
+       cp-file \
+       to-opcode \
+       search-op
 
 all: $(elfs)
-	mv $(elfs) bin/
+
 clean:
 	rm -vf $(elfs)
 
